@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/LakeMountain.unity
+    guid: c5541f0adbb28094a995b59c167bdf2f
   m_configObjects: {}
