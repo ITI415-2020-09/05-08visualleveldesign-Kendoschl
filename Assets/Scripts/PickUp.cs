@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
+    public AudioClip coin;
+    public AudioClip door;
+    public AudioSource audioS;
     public GameObject Block1;
     public GameObject Block2;
     public GameObject Block3;
@@ -18,41 +21,49 @@ public class PickUp : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             Block1.SetActive(false);
+            audioS.PlayOneShot(door);
         }
         else if (other.gameObject.CompareTag("BluePickUp"))
         {
             other.gameObject.SetActive(false);
             Block2.SetActive(false);
+            audioS.PlayOneShot(door);
         }
         else if (other.gameObject.CompareTag("GreenPickUp"))
         {
             other.gameObject.SetActive(false);
             Block5p1.SetActive(false);
+            audioS.PlayOneShot(door);
         }
         else if (other.gameObject.CompareTag("CyanPickUp"))
         {
             other.gameObject.SetActive(false);
             Block5p2.SetActive(false);
+            audioS.PlayOneShot(door);
         }
         else if (other.gameObject.CompareTag("WhitePickUp"))
         {
             other.gameObject.SetActive(false);
             Block3.SetActive(false);
+            audioS.PlayOneShot(door);
         }
         else if (other.gameObject.CompareTag("BlackPickUp"))
         {
             other.gameObject.SetActive(false);
             EntranceBlock.SetActive(false);
+            audioS.PlayOneShot(door);
         }
         else if (other.gameObject.CompareTag("GreyPickUp"))
         {
             other.gameObject.SetActive(false);
             Block6.SetActive(false);
+            audioS.PlayOneShot(door);
         }
         else if (other.gameObject.CompareTag("OrangePickUp"))
         {
             other.gameObject.SetActive(false);
             Block4.SetActive(false);
+            audioS.PlayOneShot(door);
         }
     }
 
