@@ -6,6 +6,12 @@ TagManager:
   tags:
   - RedPickUp
   - BluePickUp
+  - GreenPickUp
+  - WhitePickUp
+  - OrangePickUp
+  - GreyPickUp
+  - CyanPickUp
+  - BlackPickUp
   layers:
   - Default
   - TransparentFX

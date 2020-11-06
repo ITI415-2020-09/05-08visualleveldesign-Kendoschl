@@ -6,6 +6,12 @@ public class PickUp : MonoBehaviour
 {
     public GameObject Block1;
     public GameObject Block2;
+    public GameObject Block3;
+    public GameObject Block4;
+    public GameObject Block5p1;
+    public GameObject Block5p2;
+    public GameObject Block6;
+    public GameObject EntranceBlock;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("RedPickUp"))
@@ -17,6 +23,36 @@ public class PickUp : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             Block2.SetActive(false);
+        }
+        else if (other.gameObject.CompareTag("GreenPickUp"))
+        {
+            other.gameObject.SetActive(false);
+            Block5p1.SetActive(false);
+        }
+        else if (other.gameObject.CompareTag("CyanPickUp"))
+        {
+            other.gameObject.SetActive(false);
+            Block5p2.SetActive(false);
+        }
+        else if (other.gameObject.CompareTag("WhitePickUp"))
+        {
+            other.gameObject.SetActive(false);
+            Block3.SetActive(false);
+        }
+        else if (other.gameObject.CompareTag("BlackPickUp"))
+        {
+            other.gameObject.SetActive(false);
+            EntranceBlock.SetActive(false);
+        }
+        else if (other.gameObject.CompareTag("GreyPickUp"))
+        {
+            other.gameObject.SetActive(false);
+            Block6.SetActive(false);
+        }
+        else if (other.gameObject.CompareTag("OrangePickUp"))
+        {
+            other.gameObject.SetActive(false);
+            Block4.SetActive(false);
         }
     }
 
