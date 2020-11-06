@@ -12,6 +12,7 @@ TagManager:
   - GreyPickUp
   - CyanPickUp
   - BlackPickUp
+  - Exit
   layers:
   - Default
   - TransparentFX

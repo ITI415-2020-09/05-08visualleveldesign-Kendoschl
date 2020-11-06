@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.InputSystem;
+using TMPro;
 
 public class PickUp : MonoBehaviour
 {
@@ -15,6 +17,13 @@ public class PickUp : MonoBehaviour
     public GameObject Block5p2;
     public GameObject Block6;
     public GameObject EntranceBlock;
+
+    public TextMeshProUGUI countText;
+    public TextMeshProUGUI winText;
+    public GameObject winTextObject;
+
+    private int count;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("RedPickUp"))
@@ -65,12 +74,30 @@ public class PickUp : MonoBehaviour
             Block4.SetActive(false);
             audioS.PlayOneShot(door);
         }
+        else if (other.gameObject.CompareTag("PickUp"))
+        {
+            other.gameObject.SetActive(false);
+            audioS.PlayOneShot(coin);
+        }
+        else if (other.gameObject.CompareTag("Exit"))
+        {
+            winText.enabled = true;
+            winText.text = "You Are Free! You Got " + count.ToString() + "Points!";
+            audioS.PlayOneShot(coin);
+        }
     }
 
-            // Start is called before the first frame update
-            void Start()
+    void SetCountText()
     {
-        
+        countText.text = "Points: " + count.ToString();
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        count = 0;
+        SetCountText();
+        winText.enabled = false;
     }
 
     // Update is called once per frame
