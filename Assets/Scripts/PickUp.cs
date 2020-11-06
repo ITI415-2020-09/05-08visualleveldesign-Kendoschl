@@ -84,7 +84,7 @@ public class PickUp : MonoBehaviour
         {
             winText.enabled = true;
             winText.text = "You Are Free! You Got " + count.ToString() + " Points!";
-            audioS.PlayOneShot(coin);
+            audioS.PlayOneShot(victory);
         }
     }
 
