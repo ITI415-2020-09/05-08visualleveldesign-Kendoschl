@@ -8,6 +8,7 @@ public class PickUp : MonoBehaviour
 {
     public AudioClip coin;
     public AudioClip door;
+    public AudioClip victory;
     public AudioSource audioS;
     public GameObject Block1;
     public GameObject Block2;
@@ -20,8 +21,6 @@ public class PickUp : MonoBehaviour
 
     public TextMeshProUGUI countText;
     public TextMeshProUGUI winText;
-    public GameObject winTextObject;
-
     private int count;
 
     private void OnTriggerEnter(Collider other)
@@ -77,12 +76,14 @@ public class PickUp : MonoBehaviour
         else if (other.gameObject.CompareTag("PickUp"))
         {
             other.gameObject.SetActive(false);
+            count = count + 1;
+            SetCountText();
             audioS.PlayOneShot(coin);
         }
         else if (other.gameObject.CompareTag("Exit"))
         {
             winText.enabled = true;
-            winText.text = "You Are Free! You Got " + count.ToString() + "Points!";
+            winText.text = "You Are Free! You Got " + count.ToString() + " Points!";
             audioS.PlayOneShot(coin);
         }
     }
