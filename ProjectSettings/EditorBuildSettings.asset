@@ -5,10 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/LakeMountain.unity
+  - enabled: 1
+    path: Assets/Scenes/Terrain.unity
     guid: c5541f0adbb28094a995b59c167bdf2f
   - enabled: 1
-    path: Assets/Scenes/02-Interiors.unity
+    path: Assets/Scenes/Interior.unity
     guid: 04f0389d9866c4ea18e829dd39392b32
+  - enabled: 1
+    path: Assets/Scenes/Scene Manager.unity
+    guid: 77806c7efa1c1df448fd0ba2f204aef1
+  - enabled: 1
+    path: Assets/Scenes/Textures.unity
+    guid: 583ff1af2a5d54886a9dba87a8f8cc9a
+  - enabled: 1
+    path: Assets/Scenes/Prototype 2.unity
+    guid: 62b0cb28d442c6844b4228b3f1c9787a
   m_configObjects: {}
