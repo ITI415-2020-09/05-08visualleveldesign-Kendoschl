@@ -17,7 +17,7 @@ public class LoadNewScene : MonoBehaviour
 
     public void LoadTexture()
     {
-        SceneManager.LoadScene("Texture");
+        SceneManager.LoadScene("Textures");
     }
 
     public void LoadPrototype()
